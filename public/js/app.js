@@ -2269,13 +2269,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _slike_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slike/logo.png */ "./resources/js/components/slike/logo.png");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
 function Footer() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: "This is footer"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("nav", {
+      className: "navbar fixed-bottom",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
+        "class": "navbar-brand",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+          id: "logo",
+          src: _slike_logo_png__WEBPACK_IMPORTED_MODULE_1__.default
+        }), "Petar Todic 2021 All right reserved"]
+      })
+    })
   });
 }
 
@@ -2317,8 +2329,13 @@ function Header() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.BrowserRouter, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("nav", {
-        className: "navbar navbar-expand-lg ",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+        className: "navbar navbar-expand-lg fixed-top",
+        id: "navi",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
+          className: "navbar-brand",
+          href: "#",
+          children: "Citati srpskih velikana"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
           className: "navbar-toggler",
           type: "button",
           "data-toggle": "collapse",
@@ -2698,9 +2715,11 @@ function Home() {
       modalShow5 = _React$useState12[0],
       setModalShow5 = _React$useState12[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-      id: "jumbo",
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+      className: "row mt-5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      id: "jumbo mt-5",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
         className: "jumbotron",
         style: {
@@ -2771,6 +2790,7 @@ function Home() {
           })]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+        className: "mb-5",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
           className: "text-right",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("blockquote", {
@@ -2983,7 +3003,7 @@ function Home() {
           return setModalShow5(false);
         }
       })]
-    })
+    })]
   });
 }
 
@@ -3133,7 +3153,9 @@ var Selekcija = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "row mt-5"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
           className: "text-center mt-5",
           children: "Izaberite autora:"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("form", {
@@ -3161,7 +3183,7 @@ var Selekcija = /*#__PURE__*/function (_React$Component) {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
                   className: "btn",
                   type: "submit",
-                  children: "Sacuvaj citat"
+                  children: "Izaberite autora"
                 })
               })]
             })
@@ -3330,7 +3352,7 @@ var DodajCitat = /*#__PURE__*/function (_React$Component) {
         opis: this.state.opis
       };
       axios__WEBPACK_IMPORTED_MODULE_1___default().post('http://127.0.0.1:8000/citati/sacuvaj', citatNovi).then(function (res) {
-        return console.log(res.data);
+        alert('Uspesno ste uneli citat');
       });
     }
   }, {
@@ -3363,7 +3385,7 @@ var DodajCitat = /*#__PURE__*/function (_React$Component) {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
                 className: "form-group",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
-                  children: "Tekst ciatata:"
+                  children: "Tekst citata:"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
                   type: "text",
                   className: "form-control",
@@ -3427,12 +3449,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Index() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.BrowserRouter, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "row mt-5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.BrowserRouter, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "mt-5 mb-5",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
           to: "/citati",
-          className: "btn ",
+          className: "btn mr-5",
           children: "Svi citati"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
           to: "/citati/dodaj",
@@ -3448,7 +3473,7 @@ function Index() {
           component: _DodajCitat__WEBPACK_IMPORTED_MODULE_2__.default
         })]
       })
-    })
+    })]
   });
 }
 
@@ -3562,6 +3587,7 @@ var TabelaCitati = /*#__PURE__*/function (_Component) {
       var _this4 = this;
 
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "mt-5",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
           children: this.state.citati.map(function (citat) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
@@ -3726,7 +3752,7 @@ var DodajPisca = /*#__PURE__*/function (_React$Component) {
         istorijskoRazdoblje: this.state.istorijskoRazdoblje
       };
       axios__WEBPACK_IMPORTED_MODULE_1___default().post('http://127.0.0.1:8000/pisci/sacuvaj', citatNovi).then(function (res) {
-        return console.log(res.data);
+        alert('Uspesno ste uneli autora');
       });
     }
   }, {
@@ -3829,12 +3855,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Index() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.BrowserRouter, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "row mt-5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.BrowserRouter, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "mt-5 mb-5",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
           to: "/pisci",
-          className: "btn ",
+          className: "btn mr-5",
           children: "Svi autori"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
           to: "/pisci/dodaj",
@@ -3850,7 +3879,7 @@ function Index() {
           component: _TabelaPisci__WEBPACK_IMPORTED_MODULE_2__.default
         })]
       })
-    })
+    })]
   });
 }
 
@@ -3949,7 +3978,7 @@ var TabelaPisci = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("table", {
-          className: "table",
+          className: "table mt-5",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("thead", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("tr", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("th", {
@@ -3967,9 +3996,6 @@ var TabelaPisci = /*#__PURE__*/function (_Component) {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("th", {
                 scope: "col",
                 children: "Istorijsko razdoblje"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("th", {
-                scope: "col",
-                children: "Action"
               })]
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("tbody", {
@@ -3986,8 +4012,6 @@ var TabelaPisci = /*#__PURE__*/function (_Component) {
                   children: pisac.godina_rodjenja
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
                   children: pisac.istorijskoRazdoblje
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
-                  children: "AKCIJA"
                 })]
               }, pisac.id);
             })
@@ -8553,7 +8577,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* .btn{\r\n    margin-top: 20px;\r\n    background-color: #9c793e;\r\n    transition: all 0.5s;\r\n    position: relative;\r\n}\r\n\r\n#drugo,#trece{\r\n    margin-left: 30px;\r\n}\r\n\r\n\r\n  .btn::before {\r\n    content: '';\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    z-index: 1;\r\n    background-color: rgba(255,255,255,0.1);\r\n    transition: all 0.3s;\r\n  }\r\n  .btn:hover::before {\r\n    opacity: 0 ;\r\n    transform: scale(0.5,0.5);\r\n  }\r\n  .btn::after {\r\n    content: '';\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    z-index: 1;\r\n    opacity: 0;\r\n    transition: all 0.3s;\r\n    border: 1px solid rgba(255,255,255,0.5);\r\n    transform: scale(1.2,1.2);\r\n  }\r\n  .btn:hover::after {\r\n    opacity: 1;\r\n    transform: scale(1,1);\r\n  } */\r\n\r\n.navbar{\r\n    background-color: #301919;\r\n}\r\n\r\n.collapse{\r\n    background-color: #301919;\r\n}\r\n\r\n.navbar-nav{\r\n    background-color: #301919;\r\n}\r\n\r\n.nav-item{\r\n  color: #ffebc2;\r\n  border-radius: 20%;\r\n}\r\n\r\n.nav-item:active{\r\n  background-color: #ffebc2;\r\n  color: black;\r\n}\r\n\r\n.nav-item:hover{\r\n  background-color: #ffebc2;\r\n  color: black;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* .btn{\r\n    margin-top: 20px;\r\n    background-color: #9c793e;\r\n    transition: all 0.5s;\r\n    position: relative;\r\n}\r\n\r\n#drugo,#trece{\r\n    margin-left: 30px;\r\n}\r\n\r\n\r\n  .btn::before {\r\n    content: '';\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    z-index: 1;\r\n    background-color: rgba(255,255,255,0.1);\r\n    transition: all 0.3s;\r\n  }\r\n  .btn:hover::before {\r\n    opacity: 0 ;\r\n    transform: scale(0.5,0.5);\r\n  }\r\n  .btn::after {\r\n    content: '';\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    z-index: 1;\r\n    opacity: 0;\r\n    transition: all 0.3s;\r\n    border: 1px solid rgba(255,255,255,0.5);\r\n    transform: scale(1.2,1.2);\r\n  }\r\n  .btn:hover::after {\r\n    opacity: 1;\r\n    transform: scale(1,1);\r\n  } */\r\n\r\n.navbar{\r\n    background-color: #301919;\r\n}\r\n\r\n.collapse{\r\n    background-color: #301919;\r\n}\r\n\r\n.navbar-nav{\r\n    background-color: #301919;\r\n}\r\n\r\n.nav-item{\r\n  color: #ffebc2;\r\n  border-radius: 20%;\r\n}\r\n\r\n.nav-item:active{\r\n  background-color: #ffebc2;\r\n  color: black;\r\n}\r\n\r\n.nav-item:hover{\r\n  background-color: #ffebc2;\r\n  color: black;\r\n}\r\n\r\n.navbar-brand{\r\n  color: #ffebc2;\r\n  margin-left: 100px;\r\n  margin-right: 100px;\r\n}\r\n\r\n.navbar-brand:hover{\r\n  color: #ffebc2;\r\n}\r\n\r\n.fixed-bottom{\r\n  background-color: #301919;\r\n  color: #ffebc2;\r\n}\r\n\r\n#logo{\r\n  max-width: 30px;\r\n  max-height: 30px;\r\n  margin-right: 30px;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8602,7 +8626,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9405,6 +9429,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/dositej.jpg?15792fc847de5570786dbb00951898e5");
+
+/***/ }),
+
+/***/ "./resources/js/components/slike/logo.png":
+/*!************************************************!*\
+  !*** ./resources/js/components/slike/logo.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/logo.png?e96b9b60996a997ab37581717c6891b8");
 
 /***/ }),
 

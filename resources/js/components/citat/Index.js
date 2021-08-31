@@ -6,9 +6,12 @@ import DodajCitat from './DodajCitat';
 function Index() {
     return (
         <div>
+            <div className="row mt-5">
+
+            </div>
             <Router>
-                <div>
-                    <Link to="/citati" className="btn ">Svi citati</Link>
+                <div className="mt-5 mb-5">
+                    <Link to="/citati" className="btn mr-5">Svi citati</Link>
                     <Link to="/citati/dodaj" className="btn ">Dodaj citat</Link>
                     <Route exact path="/citati" component={TabelaCitati}></Route>
                     <Route exact path="/citati/dodaj" component={DodajCitat}></Route> 

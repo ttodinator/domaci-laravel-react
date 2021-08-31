@@ -40,8 +40,8 @@ export default class TabelaCitati extends Component{
 
     render(){
         return (
-            <div>
-                <CardColumns>
+            <div className="mt-5">
+                <CardColumns >
                     {
                         this.state.citati.map(citat=>{
                             return(

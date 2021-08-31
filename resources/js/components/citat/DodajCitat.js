@@ -70,7 +70,9 @@ export default class DodajCitat extends React.Component {
       }
 
       axios.post('http://127.0.0.1:8000/citati/sacuvaj',citatNovi)
-      .then(res=>console.log(res.data));
+      .then(res=>{
+        alert('Uspesno ste uneli citat');
+      });
 
     }
   
@@ -98,7 +100,7 @@ export default class DodajCitat extends React.Component {
               </select>
             </div>
             <div className="form-group">
-              <label>Tekst ciatata:</label>
+              <label>Tekst citata:</label>
               <input type="text" className="form-control" value={this.state.citat} onChange={this.promena}>
               </input>
             </div>

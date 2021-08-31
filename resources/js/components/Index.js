@@ -7,14 +7,13 @@ import './css/Index.css'
 
 function Index() {
     return (
-        
-        
+
         <div className="container">
-            <Header></Header>
-            <Footer></Footer>
+        <Header></Header>
+
+        <Footer></Footer> 
         </div>
-        
-        
+
     );
 }
 

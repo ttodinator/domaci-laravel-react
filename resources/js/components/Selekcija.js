@@ -37,6 +37,9 @@ export default class Selekcija extends React.Component {
   render() {
     return (
       <div>
+        <div className="row mt-5">
+
+        </div>
         <h1 className="text-center mt-5">Izaberite autora:</h1>
       <form onSubmit={this.handleSubmit}>
       <div className="row justify-content-center mt-4">
@@ -58,7 +61,7 @@ export default class Selekcija extends React.Component {
             </select>
           </div>
           <div className="form-group text-center">
-            <button className="btn" type="submit">Sacuvaj citat</button>
+            <button className="btn" type="submit">Izaberite autora</button>
           </div>
         </div>
       </div>

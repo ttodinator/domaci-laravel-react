@@ -63,7 +63,9 @@ export default class DodajPisca extends React.Component {
     } 
 
     axios.post('http://127.0.0.1:8000/pisci/sacuvaj',citatNovi)
-    .then(res=>console.log(res.data));
+    .then(res=>{
+      alert('Uspesno ste uneli autora')
+    });
 
   }
 

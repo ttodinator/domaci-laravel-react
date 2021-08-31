@@ -309,7 +309,10 @@ function Home(){
   const [modalShow5, setModalShow5] = React.useState(false);
   return(
     <div>
-             <div id="jumbo">
+             <div className="row mt-5">
+
+             </div>
+             <div id="jumbo mt-5">
                  <div className="jumbotron" style={{backgroundImage:`url(${baner1})`,height:'cover'}}>
              </div>
              <div className="row mb-4">
@@ -339,7 +342,7 @@ function Home(){
                  </div>
              </div>
 
-        <CardColumns>
+        <CardColumns className="mb-5">
         <Card className="text-right">
             <blockquote className="blockquote mb-0 card-body">
               <p>

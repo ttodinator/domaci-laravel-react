@@ -38,7 +38,7 @@ export default class TabelaPisci extends Component{
     render(){
         return (
             <div>
-                <table className="table">
+                <table className="table mt-5">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -46,7 +46,6 @@ export default class TabelaPisci extends Component{
                             <th scope="col">Prezime</th>
                             <th scope="col">Godina rodjenja</th>
                             <th scope="col">Istorijsko razdoblje</th>
-                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -59,7 +58,6 @@ export default class TabelaPisci extends Component{
                                         <td>{pisac.prezime}</td>
                                         <td>{pisac.godina_rodjenja}</td>
                                         <td>{pisac.istorijskoRazdoblje}</td>
-                                        <td>AKCIJA</td>
                                     </tr>
                                 )
                             })

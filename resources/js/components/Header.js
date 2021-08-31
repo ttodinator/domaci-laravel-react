@@ -14,8 +14,9 @@ function Header() {
     
     return (
         <Router>
-             <div>
-                <nav className="navbar navbar-expand-lg ">
+             <div >
+                <nav className="navbar navbar-expand-lg fixed-top" id="navi">
+                <a className="navbar-brand" href="#">Citati srpskih velikana</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
